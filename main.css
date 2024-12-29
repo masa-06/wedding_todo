@@ -1,0 +1,99 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #4b0082;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4b0082;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6a0dad;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #4b0082;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
