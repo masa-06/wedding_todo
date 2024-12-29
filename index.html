@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>タスク管理表</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>タスク管理表</h2>
+      <h3>タスクを入力してください</h3>
+      <form @submit.prevent>
+        <label for="inputTask">タスク名：</label>
+        <input type="text" id="inputTask" v-model="inputTask" /><br />
+        <label for="detail">詳細：</label>
+        <textarea name="detail" id="detail" v-model="detail"></textarea>
+        <label for="startScheduleDate">開始予定日付：</label>
+        <input type="date" id="startScheduleDate" v-model="startScheduleDate" />
+        <label for="endScheduleDate">終了予定日付：</label>
+        <input type="date" id="endScheduleDate" v-model="endScheduleDate" />
+        <button @click="addTask">追加する</button>
+      </form>
+      <todo_component
+        title="ToDo"
+        :tasks="taskList"
+        :completed="false"
+      ></todo_component>
+      <todo_component
+        title="Complete"
+        :tasks="taskList"
+        :completed="true"
+      ></todo_component>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
